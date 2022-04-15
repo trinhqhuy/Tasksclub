@@ -1,0 +1,7 @@
+{
+    "vscode_vibrancy.opacity": 0.4,
+    "workbench.colorTheme": "Evondev Dracula Darker Colour - No Highlight",
+    "workbench.iconTheme": "material-icon-theme",
+    "git.ignoreLimitWarning": true,
+    "editor.wordWrap": "on"
+}

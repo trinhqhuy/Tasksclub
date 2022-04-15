@@ -1,0 +1,874 @@
+//COLOR
+$whiteblue: #f0f5fe;
+$whiteblue1: #ebf3fc;
+$whiteblue2: #e7f1fd;
+$blue: #0D6EFF;
+$blue1: #bfdbfe;
+$blue2: #ACCDF6;
+$blue3: #8DABF0;
+$blue4: #2d00f7;
+$white: #ffff;
+$gray: #5e6278;
+$gray2: #dee2e6;
+$black: black;
+$red: #fb3647;
+$red1: #fe7581;
+$red2: #ff90a4;
+$orange: #f48029;
+$yellow: #ef9b1b;
+$yellow1: #ffee75;
+$pink: #d76da4;
+$pink1: #f1abb9;
+$black: #000629;
+$purple: #240046;
+$purple1: #4b1397;
+$purple2: #781ebf;
+$green: #008f63;
+$green1: #c4dfaa;
+$teal: #007788;
+$teal1: #21ada8;
+$teal2: #99eebb;
+.iconBlue {
+  color: $blue!important;
+}
+.iconRed {
+  color: $red!important;
+}
+.iconGreen {
+  color: $green;
+}
+.iconPurple {
+  color: $purple!important;
+}
+.blue_color {
+  color: $blue;
+}
+
+.blue_background {
+background: $whiteblue;
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+}
+.white_blue_background {
+background-color: $blue2;
+}
+.white_background {
+background-color: $whiteblue;
+}
+.red_color {
+color: $red;
+}
+.btn-circle {
+  width: 40px;
+  height: 40px;
+  padding: 8px 11px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
+  box-shadow: $blue2 0px 5px 22px;
+  color: $blue;
+  background-color: $blue1;
+}
+.btn-circle:hover {
+  color: $white;
+  background-color: $blue;
+  box-shadow: $blue 0px 2px 20px;
+}
+//SYSTEM
+body {
+    background-color: $whiteblue;
+    height:100%;
+}
+a {
+  text-decoration: none;
+}
+//BUTTON
+
+.button-blur {
+  background: rgba( 13, 110, 255, 0.4 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  color: $blue;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.button-blur:hover {
+  color: $whiteblue1;
+}
+.button-blur1 {
+  background: rgba( 13, 110, 255, 0.8 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  color: $white;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.button-blur1:hover {
+  color: $whiteblue1;
+}
+
+.button {
+  color: $blue!important;
+  background-color: $whiteblue;
+}
+.button1 {
+  color: $white!important;
+  background-color: $blue;
+}
+
+//header
+.container_space {
+    padding-bottom: 100px;
+    overflow: scroll;
+
+}
+.container-fluid {
+  padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+.header-color {
+  background: rgba( 255, 255, 255, 0.70 );
+  backdrop-filter: blur( 7px );
+  -webkit-backdrop-filter: blur( 7px );
+  border-radius: 10px;
+
+
+}
+.active_item {
+    border-top: 5px solid $blue;
+}
+//landing page
+.landing_row {
+    padding-top: 5rem;
+}
+.landing_text {
+    color: $blue;
+}
+.landing_image1 {
+    width: 25%;
+}
+.landing_line {
+    border-left: 5px solid $blue;
+}
+.typed-text {
+    color: $blue;
+}
+.h1 span.cursor {
+  display: inline-block;
+  color: $blue;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.h1 span.cursor.typing {
+  animation: none;
+  color: $blue;
+}
+@keyframes blink {
+  0%  { color: $blue; }
+  49% { color: $blue; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { color: $blue; }
+}
+//login page & signup page
+.lead {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.lh-lg {
+    line-height: 1.7;
+}
+.login_left_area {
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #0D6EFF;
+    min-height: 50rem;
+}
+.login_text_heading {
+    font-size: 1.5rem;
+}
+.login_right_area {
+    padding-top: 10px;
+    background-color: $whiteblue;
+  }
+.text_box_mini {
+    font-size: 1.2rem;
+    color: $gray;
+}
+.text_box_mini_link {
+    color: #0D6EFF;
+    font-weight: 600;
+}
+.text_box_large {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.form-control-style {
+    background-color: $blue1;
+    border-color: $blue1;
+    color: #5e6278;
+    transition: color .2s ease,background-color .2s ease;
+}
+.form-control-style:active {
+    background-color: $blue2;
+    border-color: $blue2;
+    color: #5e6278;
+    transition: color .2s ease,background-color .2s ease;
+    box-shadow: 0 0 0 0;
+}
+.form-control-style:focus {
+    background-color: $blue2;
+    border-color: $blue2;
+    color: #5e6278;
+    transition: color .2s ease,background-color .2s ease;
+    box-shadow: 0 0 0 0;
+}
+.btn_login {
+    background-color: $blue;
+    color: $white;
+}
+.btn_login:hover {
+    background-color: $blue;
+    color: $white;
+}
+
+.field-icon {
+    float: right;
+    margin-right: 15px;
+    margin-top: -35px;
+    position: relative;
+    z-index: 2;
+    color: $blue;
+  }
+  .field-icon1 {
+    float: right;
+    margin-right: 15px;
+    margin-top: -35px;
+    position: relative;
+    z-index: 2;
+    color: $blue;
+  }
+//Title header
+.title_header_item {
+    color: $blue;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+.title_header {
+    margin: .8rem auto;
+    margin-left: 1rem;   
+}
+//Home page
+  
+
+//tasksView
+.content {
+  min-height: 80vh;
+}
+.opacity-50 { opacity: .5; }
+.opacity-75 { opacity: .75; }
+
+.list-group {
+  width: auto;
+  max-width: 350px;
+  
+}
+
+.form-check-input:checked + .form-checked-content {
+  opacity: .5;
+}
+
+.form-check-input-placeholder {
+  pointer-events: none;
+  border-style: dashed;
+}
+[contenteditable]:focus {
+  outline: 0;
+}
+
+.list-group-checkable {
+  display: grid;
+  gap: .5rem;
+  border: 0;
+}
+.list-group-checkable .list-group-item {
+  cursor: pointer;
+  border-radius: .5rem;
+}
+.list-group-item-check {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+.list-group-item-check:hover + .list-group-item {
+  background-color: var(--bs-light);
+}
+.list-group-item-check:checked + .list-group-item {
+  color: #fff;
+  background-color: var(--bs-blue);
+}
+.list-group-item-check[disabled] + .list-group-item,
+.list-group-item-check:disabled + .list-group-item {
+  pointer-events: none;
+  filter: none;
+  opacity: .5;
+}
+.list-group-item:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.list-group-item:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.list-group-item {
+    text-decoration: none;
+    position: relative;
+    background: $white;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 0;
+    box-shadow: $blue1 0px 8px 24px;
+}
+
+.list-group-item1 {
+  width: fit-content;
+  text-decoration: none;
+  position: relative;
+  background: $white;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  border: 0;
+  box-shadow: $blue1 0px 8px 24px;
+}
+.nav-systems {
+    overflow-y: scroll;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    width: 350px;
+    backdrop-filter: blur(10px);
+    border: 0;
+}
+.nav-systems1{
+  position:fixed;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    width: 350px;
+    backdrop-filter: blur(10px);
+    border: 0;
+}
+.list-group-item:hover {
+background-color: $whiteblue;
+}
+
+.list-group-item:focus{
+    background-color: $whiteblue;
+}
+
+.tasks_background {
+    background: $blue2;
+    position: relative;
+}
+
+.bg-blue {
+    background-color: $blue;
+    color: $white;
+}
+
+.bg-whiteblue {
+    background-color: $blue1;
+    color: $blue;
+}
+
+.icon:hover .icon-unlock,
+.icon .icon-lock {
+    display: none;
+}
+.icon:hover .icon-lock {
+    display: inline;
+}
+
+.text_tasks {
+
+    color: $black!important;
+    height: auto!important;
+}
+
+.space_max_height {
+    max-height: 50rem;
+}
+
+//sidebar tasksView1
+.sidebar {
+  width: 350px;
+  height: 100%;
+  position: fixed;
+  background-color: $whiteblue;
+  transition: 0.5s;
+  }
+ 
+  .form-control-style1 {
+    background-color: $whiteblue;
+    border-color: $whiteblue;
+    color: $black;
+    transition: color .2s ease,background-color .2s ease;
+    box-shadow: $blue3 0px 8px 24px;
+}
+.form-control-style1:active {
+    background-color: $whiteblue;
+    border-color: $whiteblue;
+    color: $black;
+    transition: color .2s ease,background-color .2s ease;
+    box-shadow: $blue3 0px 8px 24px;
+
+}
+.form-control-style1:focus {
+    background-color: $whiteblue;
+    border-color: $whiteblue;
+    color: $black;
+    transition: color .2s ease,background-color .2s ease;
+    box-shadow: $blue3 0px 8px 24px;
+
+}
+ 
+  .main {
+    margin-left: 300px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    display: inline-block;
+    min-height: 90vh;
+    width: auto;
+  }
+  .form-control:disabled, .form-control[readonly] {
+    background-color: $blue1;
+    opacity: 1;
+}
+.form-control {
+  border: 0px solid #ced4da;
+}
+  
+  .top-navbar {
+    background-color: $whiteblue;
+    padding-left: 20px;
+    border-left: 2px solid $gray2;
+  }
+  
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: rgba( 13, 110, 255, 0.4 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+
+  z-index: 1;
+  min-width: 200px;
+}
+.dropdown-content button{
+  color: $white;
+  width: 200px;
+}
+
+.dropdown-content button:focus{color: $white;}
+.dropdown {
+  position: relative;
+  display: block;
+}
+.dropdown-content button:active{color: $white;}
+.dropdown-content button:hover{color: $white;}
+
+.dropdown:focus .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {display: block;}
+
+.sidebar-right {
+  width: 330px;
+  height: 100%;
+  position: fixed;
+  background-color: $whiteblue;
+  transition: 0.5s;
+
+  }
+  .sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: $whiteblue; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+     /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  .userLists {
+    width: 100%;
+    height: calc(90vh - 9rem);
+    // height: calc(81vh - 9rem);
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 0.7rem;
+    padding-right: 1.4rem;
+  }
+  .flex-left {
+    margin-right: 330px;
+  }
+  .sidenavTitle {
+    padding: 27px;
+    border-bottom: 2px solid #dee2e6;
+    text-align: center;
+    border-left: 2px solid #dee2e6;
+  }
+  .slideItems {
+    padding: 10px;
+    text-align: start; 
+    margin: 8px;
+    border-radius: 6px;
+    align-items: center; 
+    background: $white;
+    backdrop-filter: blur(10px);
+    box-shadow: $blue1 0px 0px 15px;
+  }
+  .titleItems {
+    font-size: 18px;
+  }
+  .slideItems p {
+    margin-bottom: 3px; 
+  }
+  .sideBtn {
+    color: $red;
+    background-color: $white;
+    box-shadow: $blue1 0px 0px 15px;
+    width: 315px;
+  }
+  .btnItems {
+    text-align: center; 
+  }
+  //
+  .float{
+    display: inline-block;
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:$blue;
+    color:$white;
+    border-radius:50px;
+    text-align:center;
+    box-shadow: $blue3 0px 8px 24px;
+    padding-top: 18px;
+    margin-bottom: 5rem;
+    transition: 0.5s;
+  }
+  .float:hover {
+    background-color: $blue4;
+    color: $white;
+    box-shadow: $blue 0px 8px 24px;
+  }
+  //test taskView2
+
+  .modal-backdrop {
+    background-color: rgba(0,0,0,.0001) !important;
+    
+}
+
+.modal-content {
+  background: rgba( 255, 255, 255, 0.3 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 25px );
+  -webkit-backdrop-filter: blur( 4px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+.toast {
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 2.5px );
+-webkit-backdrop-filter: blur( 2.5px );
+border-radius: 10px;
+}
+.tool-button {
+  overflow-x: scroll;
+}
+.content_container {
+  margin-left: 350px;
+  background-color: $blue1;
+  transition: 0.4s;
+    min-height: 100vh;
+  
+}
+
+.float3 .tooltiptext3 {
+  visibility: hidden;
+  width: fit-content;
+  top: 9%;
+  left: 50%;
+  margin-left: 100px;
+  background-color: $white;
+  color: $black;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 5px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.float3:hover .tooltiptext3 {
+  visibility: visible;
+}
+.float3 .tooltiptext3::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent $white;
+}
+.float2 .tooltiptext2 {
+  visibility: hidden;
+  width: fit-content;
+  top: 9%;
+  left: 34%;
+  margin-left: 100px;
+  background-color: $white;
+  color: $black;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 5px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.float2:hover .tooltiptext2 {
+  visibility: visible;
+}
+.float2 .tooltiptext2::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent $white;
+}
+.float1 .tooltiptext1 {
+  visibility: hidden;
+  width: fit-content;
+  top: 9%;
+  left: 43%;
+  margin-left: 10px;
+  background-color: $white;
+  color: $black;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 5px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+.float1:hover .tooltiptext1 {
+  visibility: visible;
+}
+.float1 .tooltiptext1::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the bottom of the tooltip */
+  left: 40%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent $white;
+}
+.float .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -60px;
+  background-color: $white;
+  color: $black;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 12px;
+  padding: 5px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.float:hover .tooltiptext {
+  visibility: visible;
+}
+.float .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: $white transparent transparent transparent;
+}
+.iconList {
+  width: 40px;
+  height: 40px;
+  padding: 8px 11px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;  
+}
+#blue {
+  color: $blue;
+  background-color: $blue2;
+  box-shadow: $blue2 0px 2px 20px;
+  box-shadow: $blue2 0px 3px 16px;
+}
+#red {
+  color: $red;
+  background-color: $pink1;
+  box-shadow: $pink1 0px 2px 20px;
+  box-shadow: $pink1 0px 3px 19px;
+}
+#green {
+  color: $green;
+  background-color: $green1;
+  box-shadow: $green1 0px 5px 10px;
+  box-shadow: $green1 0px 6px 20px;
+}
+#teal {
+  color: $teal;
+  background-color: $teal2;
+  box-shadow: $teal2 0px 5px 10px;
+  box-shadow: $teal2 0px 6px 20px;
+}
+#yellow {
+  color: $yellow;
+  background-color: $yellow1;
+  box-shadow: $yellow1 0px 3px 20px;
+  box-shadow: $yellow1 0px 3px 16px;
+}
+
+#pink {
+  color: $pink;
+  background-color: $pink1;
+  box-shadow: $pink1 0px 3px 20px;
+  box-shadow: $pink1 0px 3px 16px;
+}
+#ogrange {
+  color: $orange;
+  background-color: $yellow1;
+  box-shadow: $yellow1 0px 5px 10px;
+  box-shadow: $yellow1 0px 6px 20px;
+}
+.list-icon {
+  overflow-x: scroll;
+  list-style-type: none;
+}
+.list-icon label,
+.list-icon input {
+  margin-bottom: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.list-icon input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.list-icon input[type="radio"]:checked+label,
+.Checked+label i{
+  color: $blue!important;
+  font-size: large;
+}
+
+.list-icon label {
+  padding: 5px;
+  cursor: pointer;
+  z-index: 90;
+}
+
+.list-icon label:hover i {
+  color: $blue;
+  font-weight: 1200;
+  font-size: large;
+
+}
+.icon-select {
+  overflow-x: scroll;
+  list-style-type: none;
+}
+.icon-select label,
+.icon-select input {
+  margin-bottom: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.icon-select input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.icon-select input[type="radio"]:checked+label,
+.Checked+label i{
+  color: $blue;
+  font-size: large;
+}
+
+.icon-select label {
+  padding: 5px;
+  cursor: pointer;
+  z-index: 90;
+}
+
+.icon-select label:hover i {
+  color: $blue;
+  font-weight: 1200;
+  font-size: large;
+
+}
+//mark: MOBILE
+@media screen and (max-width: 700px) {
+  .nav-systems {
+    width: 160px;
+    
+  }
+}
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 160px;
+    height: 100%;
+    position: fixed;
+    background-color: $whiteblue;
+    transition: 0.5s;
+  }
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  
+}
+@media screen and (max-width: 700px) {
+  .content_container {
+    margin-left: 160px;
+  background-color: $blue1;
+  }
+}

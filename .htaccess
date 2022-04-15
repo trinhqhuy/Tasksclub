@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteBase /
+
+# The two lines below allow access to existing files on your server, bypassing
+# the rewrite
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^([^/]+)/?$ index.php?page=$1 [L,QSA]
+
+RewriteRule ^([^/]+)/([^/]+)/?$ index.php?page=$1&token=$2 [L,QSA]
+
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/?$ index.php?page=$1&token=$2&id=$3 [L,QSA]
+
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/([^/]+)/?$ index.php?page=$1&token=$2&id=$3&do=$4 [L,QSA]
