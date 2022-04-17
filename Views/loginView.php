@@ -1,9 +1,9 @@
 <div class="form" id="form_logged">
-                <div class="d-flex flex-col-auto justify-content-center">
-                    <img src="../Views/assets/image_views/Home.svg" width="30%">
+                <div class="content-child">
+                    <img class="d-block mx-auto text-center" src="../Views/assets/image_views/Home.svg" width="30%">
 
                 </div>
-                <h4 class="d-flex flex-col-auto justify-content-center mt-5">Bạn đã đăng nhập</h4>
+                <h4 class="d-block mx-auto text-center">Bạn đã đăng nhập</h4>
                 </div>
     <div class="row" id="form">
     <div class="message"></div>

@@ -10,8 +10,11 @@ let sideNavBtn;
 let sideBarRight;
 let sideBarHtml;
 let tokencheck = getCookie("token");
-let icon = ["pencil", "folder", "link", "book", "bookmark", "paperclip", "sunset", "moon", "", "heart", "flag", "bell", "tag", "eye", "scissors", "bag", "hammer", "lock", "key", "pin", "film", "clock", "alarm", "gift", "lightbulb"]
-
+let icon = ["pencil", "folder", "book", "bookmark", "sunset", "moon", "heart", "flag", "bell", "tag", "eye", "bag", "camera", "lock", "key", "pin", "clock", "alarm", "gift", "lightbulb", "cart"]
+let colorItems = ["red", "green", "blue", "teal", "yellow", "pink"]
+Array.prototype.random = function (length) {
+  return this[Math.floor((Math.random()*length))];
+}
 function getCookie(cname) {
   let name = cname + "=";
   let ca = document.cookie.split(';');
@@ -65,7 +68,7 @@ const intervalLists = setInterval(() => {
 }, 2000);
 // addList modal
 var modal = document.getElementById('modal')
-modal.innerHTML += `<!---model add task--->
+modal.innerHTML = `<!---model add task--->
 <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
   <!--css-->
@@ -78,7 +81,7 @@ modal.innerHTML += `<!---model add task--->
         <form>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label fs-7 fw-bolder text-dark">Icon</label>
-            <ul class="d-flex flex-row list-icon me-3">
+            <ul class="d-flex flex-row list-icon me-3" id="list-icon">
             
             </ul>
           </div>
@@ -96,13 +99,30 @@ modal.innerHTML += `<!---model add task--->
     </div>
   </div>
 </div>`
-let listIcon = document.querySelector('.list-icon')
+function addIconSelected(model) {
+  if(model == 1) {
+    let listIcon1 = document.querySelector('.list-icon')
 icon.forEach(function(item){
-  listIcon.innerHTML += `<li>
+  listIcon1.innerHTML += `<li>
+  <input type="radio" id="${item}" class="list-icon-input" name="icon-radio" value="${item}"/>
+  <label for="${item}" class="list-icon-label"><i class="bi bi-${item}-fill fw-bolder list-icon"></i></label>
+  </li>`
+});
+  }else if (model == 2){
+    let listIcon2 = document.getElementById('editModelList')
+icon.forEach(function(item){
+  listIcon2.innerHTML += `<li>
   <input type="radio" id="${item}" name="icon-radio" value="${item}"/>
   <label for="${item}"><i class="bi bi-${item}-fill fw-bolder"></i></label>
   </li>`
 });
+  }
+
+}
+modal.addEventListener('hidden.bs.modal', function (event) {
+  let listIconid = document.getElementById('list-icon')
+  listIconid.innerHTML = ''
+})
 
 //sidebar click function
 function clicked(btnId, nameList, colorname, iconpack) {
@@ -123,7 +143,7 @@ function clicked(btnId, nameList, colorname, iconpack) {
                         <div class="dropdown">
                                 <button class="btn dropbtn"><i class="bi bi-three-dots"></i></button>
                                 <div class="dropdown-content">
-                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever=""><i class="bi bi-pencil pe-2"></i> Sửa</button>
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="" onclick="addIconSelected('2')"><i class="bi bi-pencil pe-2"></i> Sửa</button>
                                     <button class="btn"><i class="bi bi-trash3 pe-2"></i> Xóa</button>
                                     <button class="btn"><i class="bi bi-person-plus"></i> Thêm thành viên</button>
                                 </div>
@@ -198,7 +218,7 @@ modal1.innerHTML = `<!---model add task--->
         <form>
           <div class="mb-3">
             <label for="recipient-name" class="col-form-label fs-7 fw-bolder text-dark">Icon</label>
-            <ul class="d-flex flex-row me-3 icon-select" id="icon-select">
+            <ul class="d-flex flex-row me-3 list-icon" id="editModelList">
             
             </ul>
           </div>
@@ -216,13 +236,7 @@ modal1.innerHTML = `<!---model add task--->
     </div>
   </div>
 </div>`
-let listIcon1 = document.getElementById('icon-select')
-icon.forEach(function(item){
-  listIcon1.innerHTML += `<li>
-  <input type="radio" id="${item}" name="icon-select" value="${item}"/>
-  <label for="${item}"><i class="bi bi-${item}-fill fw-bolder"></i></label>
-  </li>`
-});
+
     // bootstrap model
   var exampleModal = document.getElementById("exampleModal");
   exampleModal.addEventListener("show.bs.modal", function (event) {
@@ -573,6 +587,7 @@ function unStar(id) {
 }
 function addList() {
   var icon = document.getElementsByName('icon-radio')
+  var choosecolor = colorItems[Math.floor(Math.random() * colorItems.length)];
   var valueIcon = ''
   var valueInput = document.getElementById('message-list').value
   var alertValue = document.querySelector('.alertValueList')
@@ -589,7 +604,8 @@ function addList() {
     var data = {
       tokensession: tokencheck,
       content: valueInput,
-      icon: valueIcon
+      icon: valueIcon,
+      color: choosecolor
     }
     fetch(url, {
       method: 'POST',

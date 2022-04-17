@@ -11,15 +11,17 @@ $data = json_decode(file_get_contents('php://input'));
 $tokensession = '';
 $content = '';
 $icon = '';
+$color = '';
 if(isset($data)) {
     $tokensession = $data->tokensession;
     $content = $data->content;
     $icon = $data->icon;
+    $color = $data->color;
     $checktoken = $db->fetch_assoc("SELECT * FROM `token` WHERE `id_token` = '$tokensession'",1); 
     
     if($checktoken != '') {
         $iduser = $checktoken['id_user'];
-        $user_row = $db->get_list("INSERT INTO `lists`(`id_user`, `name`, `icon`) VALUES ('$iduser','$content','$icon')");
+        $user_row = $db->get_list("INSERT INTO `lists`(`id_user`, `name`, `icon`,`color`) VALUES ('$iduser','$content','$icon','$color')");
         if($user_row == 1) {
             echo json_encode([
                 'error'=> true,

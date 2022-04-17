@@ -3,7 +3,7 @@
     <div class="d-flex align-items-center title_header">
         <span class="title_header_item me-4">Công việc</span>
         <div class="button">
-        <button id="addListBtn" class="btn btn-circle mx-1 float1" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever=""><i class="bi bi-folder-plus"></i>
+        <button id="addListBtn" class="btn btn-circle mx-1 float1" data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="" onclick="addIconSelected('1')"><i class="bi bi-folder-plus"></i>
         <span class="tooltiptext1">Thêm danh sách</span>
     </button>
     
@@ -27,10 +27,12 @@
 </div>
 
 <div id="content" class="content_container container_space">
-    <div class="d-flex flex-col-auto justify-content-center">
-        <img src="../Views/assets/image_views/5.svg" width="30%">
+    <div class="content-child">
+    <img class="d-block mx-auto text-center" src="../Views/assets/image_views/5.svg" width="30%">
+    
+    <h4 class="d-block mx-auto text-center">Hãy chọn thư mục</h4>
     </div>
-    <h4 class="d-flex flex-col-auto justify-content-center mt-5">Hãy chọn thư mục</h4>
+       
 </div>
 <div id="modal"></div>
 <div id="modal1"></div>

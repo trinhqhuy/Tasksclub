@@ -269,6 +269,14 @@ a {
 .content {
   min-height: 80vh;
 }
+.content-child {
+  min-height: 80vh;
+  flex-direction: column;
+  margin-left: 0;
+  display: flex;           /* establish flex container */
+  justify-content: center;
+  align-items: center; 
+}
 .opacity-50 { opacity: .5; }
 .opacity-75 { opacity: .75; }
 
@@ -768,12 +776,7 @@ border-radius: 10px;
   box-shadow: $pink1 0px 3px 20px;
   box-shadow: $pink1 0px 3px 16px;
 }
-#ogrange {
-  color: $orange;
-  background-color: $yellow1;
-  box-shadow: $yellow1 0px 5px 10px;
-  box-shadow: $yellow1 0px 6px 20px;
-}
+
 .list-icon {
   overflow-x: scroll;
   list-style-type: none;
@@ -793,7 +796,7 @@ border-radius: 10px;
 }
 
 .list-icon input[type="radio"]:checked+label,
-.Checked+label i{
+.Checked+label .list-icon{
   color: $blue!important;
   font-size: large;
 }
@@ -805,42 +808,6 @@ border-radius: 10px;
 }
 
 .list-icon label:hover i {
-  color: $blue;
-  font-weight: 1200;
-  font-size: large;
-
-}
-.icon-select {
-  overflow-x: scroll;
-  list-style-type: none;
-}
-.icon-select label,
-.icon-select input {
-  margin-bottom: 10px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.icon-select input[type="radio"] {
-  opacity: 0.01;
-  z-index: 100;
-}
-
-.icon-select input[type="radio"]:checked+label,
-.Checked+label i{
-  color: $blue;
-  font-size: large;
-}
-
-.icon-select label {
-  padding: 5px;
-  cursor: pointer;
-  z-index: 90;
-}
-
-.icon-select label:hover i {
   color: $blue;
   font-weight: 1200;
   font-size: large;
