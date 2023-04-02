@@ -1,4 +1,4 @@
-# TasksClub app on iOS
+# TasksClub.
 
 ## About
 ### This application is built with SwiftUI for the front end and PHP and MySQL database for the back end. 
