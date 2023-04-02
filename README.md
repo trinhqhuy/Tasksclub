@@ -1,7 +1,8 @@
 # TasksClub.
 
-## About
-### This application is built with SwiftUI for the front end and PHP and MySQL database for the back end. 
+### About
++ The iOS application built with SwiftUI for the front end. 
++ The web application built with Javascript, Bootstrap and Sass for the front end and PHP and MySQL database for the back end.
 
 ### Features
 Users using team work management applications can add, update, remove, find, and enter any number of groups as well as manage group tasks.
