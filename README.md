@@ -14,3 +14,11 @@ The application can list the items the user has in the group or the list can inc
 Passwords are fully secured in the application, which enables users to manage personal information securely.
 
 ![tasksclub](https://user-images.githubusercontent.com/77260252/229351658-96258f97-ad2b-4646-b4a1-a3ea5d229381.png)
+
+### Some pictures from web application
+
+![Group 46](https://user-images.githubusercontent.com/77260252/229352476-d39e1590-7ed4-4436-9104-2940c3bba579.png)
+
+### Some pictures from iOS application
+
+![Group 47](https://user-images.githubusercontent.com/77260252/229352646-9eef829e-1cf3-49bb-852b-d895f3a25796.png)
